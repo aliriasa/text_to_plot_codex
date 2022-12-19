@@ -5,7 +5,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 matplotlib.use('SVG')
 
-openai.api_key = "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"
+openai.api_key = "API KEY"
 
 class Text_to_Plot():
     def __init__(self, q):

@@ -16,8 +16,8 @@ UPLOAD_FOLDER = 'static/uploads/'
 d = "/*Description: The dataframe “df” only contains the following columns: country, continent, year, life expectancy (lifeExp), population (pop), GDP per capita (gdpPercap), the ISO alpha, the ISO numerical*/"
 p = "/*Prompt: The life expectancy in Oceania countries throughout the years.*/"
 c = "df.query(\"continent == 'Oceania'\").plot(kind = 'line', x='year', y='lifeExp, c='country') <STOP>"
-p2 = "/*Prompt: Gross Domestic Product per person over time in Europe by color as country/*"
-c2 = "df.query(\"continent == 'Europe'\").plot(kind = 'line', x='year', y='gdpPercap, c= 'country') <STOP>"
+p2 = "/*Prompt: Gross Domestic Product per person over time in Europe/*"
+c2 = "df.query(\"continent == 'Europe'\").plot(kind = 'line', x='year', y='gdpPercap) <STOP>"
 
 qwerty = d + p + c + p2 + c2
 #delete 
