@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+   </head>
+   <body>
+      <div>
+         <form method="post" action="/" enctype=multipart/form-data class = "file">
+            <input type="file" required name= file value = "Add file" />
+            <input type='submit' name = "btn" id='apply-button' value='Submit'/> 
+         </form>
+      </div>
+      <div class= "plot">
+         <form>
+            <img class="center" src = "{{ url_for('static',filename='plot/plot.png') }}">
+         </form>
+      </div>
+      <div class = "look">
+         <form method="post" action="/" enctype=multipart/form-data>
+            <input type='text' id='user-text' placeholder="Type your plot here" name='prompt'/>
+            <input type='submit' id='apply-button' name = "btn" value='Done'/>    
+         </form>
+      </div>
+      <div class = "textbox">
+         <p><em>{{data["Description"]}}</em></p>
+         {% for item in data["QC"]%}
+            <p><b>{{item["Query"]}}</b></p>
+            <p>&nbsp&nbsp{{item["Code"]}}</p>
+         {% endfor %}
+      </div>
+   </body>
+</html>
